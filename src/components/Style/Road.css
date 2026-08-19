@@ -1,0 +1,15 @@
+.road {
+  position: relative;
+  width: 700px;
+  height: 80px;
+  background: #333;
+  overflow: visible;
+}
+
+.road-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  border-top: 4px dashed #fff;
+}
