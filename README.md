@@ -1,41 +1,47 @@
-> A small web app built for one person — my baby, my love, my everything. Not a portfolio piece.
-
----
-
-```markdown
 # Our Journey
 
-**A gift, disguised as a side project.**
+A jeepney travels along a road through 12 months of memories. Drag the
+timeline (or tap a stop) to move it — the floating photo above it changes
+per month, and reaching August unlocks a letter.
 
-This repo isn't a portfolio piece and it isn't for recruiters. It's for one
-person — built to celebrate 1 year with the person who is my baby, my
-love, my everything.
+## Run it
 
-## What this is
-
-A small, personal web app made for our anniversary. No analytics, no
-audience of a thousand — an audience of one. She scrolls through our
-memories together, and at the last stop, a jeepney pulls up to reveal
-where we're going next.
-
-## How it works
-
-- A timeline of moments we've shared, each with its own photo and a note
-- A jeepney that drives along the road as she scrolls or drags it — a
-  small nod to home
-- The last stop isn't a memory. It's the plan.
-
-## Built with
-
-- React + TypeScript
-- TailwindCSS
-- A lot of "remember when"
-
-## Why
-
-Some things are worth more time than a store-bought gift. This took
-longer to build than it would've taken to buy something — that was
-kind of the point.
+```bash
+npm install
+npm run dev
 ```
 
----
+Then open the local URL it prints (usually `http://localhost:5173`).
+
+## Where to customize
+
+- **`src/data/memories.ts`** — the 12 months: title, description, and the
+  placeholder accent color for each. This is the only file you need to
+  touch to change the content.
+- **`src/components/MemoryCard.tsx`** — swap the placeholder `<div>`
+  (labeled "photo") for a real `<img src="..." />` once you have photos.
+  Drop image files in `public/` and reference them as `/your-photo.jpg`.
+- **`src/components/LetterReveal.tsx`** — replace the placeholder letter
+  text and sign-off with your own.
+- **`tailwind.config.ts`** — the peacock-blue palette lives under
+  `theme.extend.colors.peacock`. Adjust the hex values if you want a
+  different mood.
+
+## How the movement works
+
+- `Timeline.tsx` tracks a raw drag value (0–11) that follows your pointer
+  1:1 — no lag on the handle itself.
+- `useSmoothPosition.ts` is a small hook that makes the jeepney *chase*
+  that value with a capped speed per frame, so it always trails slightly
+  behind instead of teleporting.
+- The gap between the raw value and the jeepney's smoothed position
+  (`velocity` in `App.tsx`) drives the jeepney's tilt and the string's
+  sway — both settle back to neutral once movement stops.
+- Releasing the drag snaps the raw value to the nearest month; the
+  jeepney's smoothing then eases it into that exact stop.
+
+## Stack
+
+React + TypeScript + Vite + Tailwind CSS. No animation library — all
+motion is CSS transitions/keyframes plus one `requestAnimationFrame` loop
+in `useSmoothPosition`.
