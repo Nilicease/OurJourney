@@ -4,7 +4,7 @@ import { data } from "./data/data";
 import { galleryByMemoryId } from "./data/gallery";
 import { Memory } from "./types/Memory";
 
-const imageUrl = (id: string) => `src/assets/${id}`;
+const imageUrl = (id: string) => `/assets/${id}`;
 export const memories: Memory[] = data.map(([month, title, description, id, note, letter], index) => ({
   id: index + 1, month, title, description, note, letter, image: imageUrl(id),
   gallery: [...galleryByMemoryId[index + 1]],
