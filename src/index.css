@@ -1,4 +1,720 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Manrope:wght@400;500;600&display=swap');
-.timeline-scroller{overflow-x:auto;overflow-y:hidden;padding:0 2px 8px;scrollbar-color:#4dcdd6 #062d42;scrollbar-width:thin}.timeline-scroller::-webkit-scrollbar{height:7px}.timeline-scroller::-webkit-scrollbar-track{background:#062d42;border-radius:999px}.timeline-scroller::-webkit-scrollbar-thumb{background:#4dcdd6;border-radius:999px;box-shadow:0 0 8px #78f5f8}
-.rotate-device{display:none}@media screen and (max-width:720px) and (orientation:portrait){.rotate-device{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:32px;text-align:center;background:radial-gradient(circle at 50% 40%,#087f8c,#002338 70%);color:#edffff}.rotate-device span{font-size:58px;color:#79edf3;animation:rotate-hint 1.8s ease-in-out infinite}.rotate-device strong{font:26px 'DM Serif Display'}.rotate-device p{margin:0;color:#b8dbdf;font:14px 'Libre Baskerville';line-height:1.6}}@keyframes rotate-hint{50%{transform:rotate(90deg)}}
-@tailwind base;@tailwind components;@tailwind utilities;*{box-sizing:border-box}body{margin:0;background:#002c3b;color:#eafffb;font-family:Manrope,sans-serif}.journey{min-height:100vh;overflow:hidden;position:relative;padding:48px 5vw 22px;background:radial-gradient(ellipse at 50% 63%,#17889b 0%,#075769 27%,#012d43 60%,#001b31 100%)}.stars{position:absolute;inset:0;opacity:.55;background-image:radial-gradient(#c9ffff 1px,transparent 1.5px),radial-gradient(#fff 1px,transparent 1.5px);background-size:77px 73px,123px 117px;background-position:13px 29px,55px 13px}.moon{position:absolute;width:450px;height:230px;border-radius:50%;background:#65dceb20;filter:blur(40px);top:19%;left:39%}.mountains{position:absolute;left:-5%;right:-5%;height:230px;bottom:36%;clip-path:polygon(0 100%,0 72%,8% 58%,15% 73%,25% 23%,32% 68%,42% 40%,52% 75%,63% 35%,73% 69%,84% 25%,92% 61%,100% 45%,100% 100%);background:#073b55;opacity:.8}.mountains-front{bottom:31%;height:175px;background:#062f49;opacity:.85}.water{position:absolute;left:0;right:0;bottom:25%;height:20%;opacity:.35;background:repeating-linear-gradient(0deg,transparent 0 19px,#9eeaf91c 20px 21px)}header,.motto,.scene,.timeline-wrap,.story,footer{position:relative;z-index:1}header{width:300px}.eyebrow{font:32px 'DM Serif Display';letter-spacing:.02em}.eyebrow span{color:#66e5ee;font-size:21px}header p{font:italic 18px 'Libre Baskerville';color:#b4d8dd;margin:8px 0}.motto{position:absolute;right:6vw;top:52px;font:17px 'Libre Baskerville';color:#c3d7dd}.scene{height:485px;max-width:1250px;margin:auto}.memory-card{position:absolute;top:8px;left:50%;width:268px;transform:translateX(-50%);background:#f6f3ef;padding:7px 7px 19px;border-radius:18px;box-shadow:0 12px 24px #001826aa;animation:float 4s ease-in-out infinite;color:#555;overflow:visible}.memory-card img{display:block;width:100%;height:153px;object-fit:cover;border-radius:12px 12px 1px 1px}.memory-copy{text-align:center;padding:9px 8px 0;font-family:'Libre Baskerville'}.memory-copy strong{display:block;color:#06728a;font:22px 'DM Serif Display'}.memory-copy span,.memory-copy small{display:block;font-size:11px;margin-top:3px}.memory-copy small{color:#777;font-size:9px}.memory-card i{position:absolute;bottom:-16px;left:50%;font-style:normal;color:#75dbe6;font-size:18px}.string{position:absolute;left:50%;top:210px;width:390px;height:260px;transform:translateX(-14%);overflow:visible}.string path{fill:none;stroke:#b1f4f6;stroke-width:1.5;filter:drop-shadow(0 0 3px #46dce6)}.jeepney{position:absolute;bottom:30px;width:300px;transform:translateX(-50%);transition:left .15s linear;z-index:3}.jeepney-svg{width:100%;filter:drop-shadow(0 10px 7px #001827a0)}.driving .jeepney-svg{animation:drive .46s ease-in-out infinite}.road{position:absolute;bottom:0;left:-10vw;right:-10vw;height:92px;background:linear-gradient(#06293a,#001928);border-top:5px solid #d3bc9d66;box-shadow:0 -6px 15px #67dae31c}.road span{position:absolute;top:47px;width:105px;border-top:3px solid #f6e3ae77}.road span:nth-child(1){left:15%}.road span:nth-child(2){left:48%}.road span:nth-child(3){left:80%}.timeline-wrap{margin:0 auto;max-width:1340px;background:#00293db0;border:1px solid #0c7890;border-radius:20px;padding:24px 38px 9px;box-shadow:0 12px 30px #001b2e99}.timeline{height:69px;position:relative;touch-action:none;cursor:grab}.timeline:active{cursor:grabbing}.track-base,.track-fill{position:absolute;top:11px;left:0;height:4px;border-radius:5px}.track-base{width:100%;background:#276176}.track-fill{background:linear-gradient(90deg,#36ced6,#8ff7f8);box-shadow:0 0 11px #48e7ef}.thumb{position:absolute;top:1px;width:23px;height:23px;border-radius:50%;background:#baffff;border:4px solid #fff;box-shadow:0 0 0 4px #38cbdc66,0 0 18px #71f8ff;transform:translateX(-50%);pointer-events:none}.stop{position:absolute;top:1px;width:76px;padding:0;transform:translateX(-50%);border:0;background:none;color:#d9f2f2;font-family:'DM Serif Display';cursor:pointer}.stop b{display:block;width:16px;height:16px;margin:3px auto 11px;border-radius:50%;border:3px solid #d9ffff;background:#0b5570;box-shadow:0 0 0 2px #03435b}.stop span{font-size:15px;white-space:nowrap}.stop small{display:block;color:#a5c8cd;font:10px 'Libre Baskerville';white-space:nowrap;margin-top:3px}.stop.done b{background:#45d5db}.stop.active b{background:#c4ffff;box-shadow:0 0 0 3px #169aaf,0 0 17px #82ffff;transform:scale(1.2)}.drag-hint{text-align:center;margin:5px 0 0;color:#adcdd3;font:14px 'Libre Baskerville'}.story{max-width:1340px;margin:35px auto 14px;min-height:150px;display:flex;gap:48px;align-items:center;padding:24px 32px;border:1px solid #167086;border-radius:24px;background:#00293b87}.story-copy{width:300px}.section-label{font:italic 16px 'Libre Baskerville';color:#75e5ef;margin:0}.story h1{font:27px 'DM Serif Display';margin:3px 0}.story-copy>p:last-child{font:14px 'Libre Baskerville';line-height:1.6;color:#d3e5e6}.polaroids{display:flex;gap:14px;flex:1;justify-content:center}.polaroids img{width:125px;height:105px;object-fit:cover;background:#fff;padding:6px 6px 18px;box-shadow:0 8px 12px #00172699}.polaroids img:nth-child(1){transform:rotate(-6deg)}.polaroids img:nth-child(3){transform:rotate(6deg)}.end-note{text-align:center;margin-left:auto;width:280px;color:#ecffff;font:17px 'Libre Baskerville'}.end-note p{margin:0 0 8px}.end-note em{color:#a7d3d8;font-size:13px}.end-note button,.letter-overlay .close{display:block;margin:14px auto 0;border:1px solid #75e8ee;border-radius:18px;padding:9px 25px;background:#08718b;color:#fff;font:15px 'Libre Baskerville';box-shadow:0 0 18px #39d7e955;cursor:pointer}.journey-complete .moon{background:#83f4ed4d}.letter-overlay{position:fixed;inset:0;z-index:10;display:grid;place-items:center;background:#001b2ad9;backdrop-filter:blur(8px)}.letter{width:min(460px,88vw);min-height:450px;padding:55px 48px;background:linear-gradient(120deg,#f5e9cc,#fff9eb 45%,#e8d5aa);color:#59442d;box-shadow:0 25px 80px #000;transform-origin:top;animation:unfold .7s cubic-bezier(.22,1,.36,1)}.letter span{display:block;text-align:center;font-size:30px;color:#086d78}.letter p{font:18px 'Libre Baskerville';line-height:1.8}.close{position:fixed;right:20px;top:14px;font-size:28px!important;background:transparent!important;border:0!important;box-shadow:none!important}footer{text-align:center;color:#8cbfc6;font:25px 'Great Vibes';margin-top:17px}@keyframes float{50%{transform:translateX(-50%) translateY(-7px)}}@keyframes drive{50%{transform:rotate(-1.2deg) translateY(2px)}}@keyframes unfold{from{transform:perspective(800px) rotateX(-80deg) scale(.8);opacity:0}to{transform:none;opacity:1}}@media(max-width:720px){.journey{padding:28px 16px 18px}.motto{display:none}header{width:auto}.eyebrow{font-size:27px}.scene{height:410px}.memory-card{width:205px}.memory-card img{height:115px}.string{width:270px;height:210px;top:175px;transform:translateX(-9%)}.jeepney{width:220px;bottom:30px}.timeline-wrap{overflow:hidden;padding:18px 8px 8px;border-radius:15px}.timeline{width:760px;margin-left:8px}.stop{width:64px}.stop span{font-size:12px}.stop small{display:none}.drag-hint{font-size:11px}.story{margin-top:22px;padding:22px;display:block}.story-copy{width:auto}.polaroids{margin-top:18px}.polaroids img{width:28%;height:86px}.end-note{width:auto;margin:20px 0 0}.mountains{bottom:42%}.road{height:70px}.road span{top:37px}footer{font-size:21px}.letter{padding:42px 28px;min-height:420px}}
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Manrope:wght@400;500;600&display=swap");
+.audio-player {
+  position: absolute;
+  z-index: 4;
+  top: 30px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  transform: translateX(-50%);
+  min-width: 225px;
+  padding: 8px 12px;
+  border: 1px solid #55becd73;
+  border-radius: 999px;
+  background: #002a3b91;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 5px 18px #00162566;
+}
+.audio-player button {
+  width: 29px;
+  height: 29px;
+  flex: none;
+  border: 1px solid #82eff3;
+  border-radius: 50%;
+  background: #08768a;
+  color: #efffff;
+  font-size: 12px;
+  cursor: pointer;
+}
+.visualizer {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 22px;
+}
+.visualizer span {
+  display: block;
+  width: 3px;
+  height: calc(4px + var(--level, 0.12) * 18px);
+  border-radius: 999px;
+  background: linear-gradient(#c4ffff, #37cad5);
+  box-shadow: 0 0 5px #56e7ef;
+  transition: height 70ms linear;
+}
+.audio-label {
+  font: 11px "Libre Baskerville";
+  color: #caedef;
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .audio-player {
+    top: 80px;
+    min-width: 204px;
+    padding: 6px 10px;
+  }
+  .audio-label {
+    font-size: 10px;
+  }
+  .visualizer span {
+    width: 2px;
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #002c3b;
+  color: #eafffb;
+  font-family: Manrope, sans-serif;
+}
+.journey {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding: 48px 5vw 22px;
+  background: radial-gradient(
+    ellipse at 50% 63%,
+    #17889b 0%,
+    #075769 27%,
+    #012d43 60%,
+    #001b31 100%
+  );
+}
+.stars {
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  background-image:
+    radial-gradient(#c9ffff 1px, transparent 1.5px),
+    radial-gradient(#fff 1px, transparent 1.5px);
+  background-size:
+    77px 73px,
+    123px 117px;
+  background-position:
+    13px 29px,
+    55px 13px;
+}
+.moon {
+  position: absolute;
+  width: 450px;
+  height: 230px;
+  border-radius: 50%;
+  background: #65dceb20;
+  filter: blur(40px);
+  top: 19%;
+  left: 39%;
+}
+.mountains {
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  height: 230px;
+  bottom: 36%;
+  clip-path: polygon(
+    0 100%,
+    0 72%,
+    8% 58%,
+    15% 73%,
+    25% 23%,
+    32% 68%,
+    42% 40%,
+    52% 75%,
+    63% 35%,
+    73% 69%,
+    84% 25%,
+    92% 61%,
+    100% 45%,
+    100% 100%
+  );
+  background: #073b55;
+  opacity: 0.8;
+}
+.mountains-front {
+  bottom: 31%;
+  height: 175px;
+  background: #062f49;
+  opacity: 0.85;
+}
+.water {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25%;
+  height: 20%;
+  opacity: 0.35;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0 19px,
+    #9eeaf91c 20px 21px
+  );
+}
+header,
+.motto,
+.scene,
+.timeline-wrap,
+.story,
+footer {
+  position: relative;
+  z-index: 1;
+}
+header {
+  width: 310px;
+}
+.eyebrow {
+  font: 32px "DM Serif Display";
+  letter-spacing: 0.02em;
+}
+.eyebrow span {
+  color: #66e5ee;
+  font-size: 21px;
+}
+header p {
+  font: italic 16px "Libre Baskerville";
+  color: #b4d8dd;
+  margin: 8px 0;
+}
+.motto {
+  position: absolute;
+  right: 6vw;
+  top: 52px;
+  font: 17px "Libre Baskerville";
+  color: #c3d7dd;
+}
+.scene {
+  height: 485px;
+  max-width: 1250px;
+  margin: auto;
+}
+.memory-card {
+  position: absolute;
+  top: 8px;
+  width: 268px;
+  transform: translateX(-50%);
+  background: #f6f3ef;
+  padding: 7px 7px 19px;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px #001826aa;
+  animation: float 4s ease-in-out infinite;
+  color: #555;
+  overflow: visible;
+}
+.memory-card img {
+  display: block;
+  width: 100%;
+  height: 153px;
+  object-fit: cover;
+  border-radius: 12px 12px 1px 1px;
+}
+.memory-card img.image-fallback {
+  opacity: 0;
+}
+.memory-card:has(.image-fallback) {
+  background: linear-gradient(145deg, #087f8c, #043e5a);
+}
+.memory-copy {
+  text-align: center;
+  padding: 9px 8px 0;
+  font-family: "Libre Baskerville";
+}
+.memory-copy strong {
+  display: block;
+  color: #06728a;
+  font: 22px "DM Serif Display";
+}
+.memory-copy span,
+.memory-copy small {
+  display: block;
+  font-size: 11px;
+  margin-top: 3px;
+}
+.memory-copy small {
+  color: #777;
+  font-size: 9px;
+}
+.memory-card i {
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  font-style: normal;
+  color: #75dbe6;
+  font-size: 18px;
+}
+.jeepney {
+  position: absolute;
+  bottom: 30px;
+  width: 300px;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.jeepney-svg {
+  width: 100%;
+  filter: drop-shadow(0 10px 7px #001827a0);
+}
+.driving .jeepney-svg {
+  animation: drive 0.46s ease-in-out infinite;
+}
+.road {
+  position: absolute;
+  bottom: 0;
+  left: -10vw;
+  right: -10vw;
+  height: 92px;
+  background: linear-gradient(#06293a, #001928);
+  border-top: 5px solid #d3bc9d66;
+  box-shadow: 0 -6px 15px #67dae31c;
+}
+.road span {
+  position: absolute;
+  top: 47px;
+  width: 105px;
+  border-top: 3px solid #f6e3ae77;
+}
+.road span:nth-child(1) {
+  left: 15%;
+}
+.road span:nth-child(2) {
+  left: 48%;
+}
+.road span:nth-child(3) {
+  left: 80%;
+}
+.timeline-wrap {
+  margin: 0 auto;
+  max-width: 1040px;
+  background: #00293db0;
+  border: 1px solid #0c7890;
+  border-radius: 20px;
+  padding: 18px 28px 13px;
+  box-shadow: 0 12px 30px #001b2e99;
+}
+.timeline-heading,
+.range-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.timeline-heading {
+  font: 13px "Libre Baskerville";
+  color: #a8d8dc;
+}
+.timeline-heading strong {
+  color: #e9ffff;
+}
+.range-status {
+  gap: 14px;
+  margin: 7px 0 11px;
+}
+.range-status > div {
+  display: grid;
+  text-align: center;
+  min-width: 0;
+}
+.range-status strong {
+  font: 18px "DM Serif Display";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 550px;
+}
+.range-status small {
+  font: 11px "Libre Baskerville";
+  color: #87bdc6;
+}
+.range-status button {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #2e9ca9;
+  border-radius: 50%;
+  background: #064b61;
+  color: #dfffff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+.range-status button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.range-control {
+  position: relative;
+  height: 44px;
+  padding-top: 14px;
+}
+.range-control input {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  width: 100%;
+  height: 44px;
+  margin: 0;
+  background: transparent;
+  cursor: grab;
+}
+.range-control input:active {
+  cursor: grabbing;
+}
+.range-control input::-webkit-slider-runnable-track {
+  height: 5px;
+  background: transparent;
+}
+.range-control input::-moz-range-track {
+  height: 5px;
+  background: transparent;
+}
+.range-control input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  margin-top: -10px;
+  border: 4px solid white;
+  border-radius: 50%;
+  background: #baffff;
+  box-shadow:
+    0 0 0 4px #38cbdc66,
+    0 0 18px #71f8ff;
+}
+.range-control input::-moz-range-thumb {
+  width: 17px;
+  height: 17px;
+  border: 4px solid white;
+  border-radius: 50%;
+  background: #baffff;
+  box-shadow:
+    0 0 0 4px #38cbdc66,
+    0 0 18px #71f8ff;
+}
+.range-control input:focus-visible {
+  outline: none;
+}
+.range-control input:focus-visible::-webkit-slider-thumb {
+  outline: 3px solid #fff8bc;
+  outline-offset: 4px;
+}
+.range-control input:focus-visible::-moz-range-thumb {
+  outline: 3px solid #fff8bc;
+  outline-offset: 4px;
+}
+.range-fill {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: 0;
+  height: 5px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #36ced6, #8ff7f8);
+  box-shadow: 0 0 11px #48e7ef;
+}
+.range-control:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  border-radius: 5px;
+  background: #276176;
+}
+.range-ticks {
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 15px;
+  pointer-events: none;
+}
+.range-ticks span {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #d9ffff;
+  border-radius: 50%;
+  background: #0b5570;
+  transform: translateX(-50%);
+}
+.range-ticks .done {
+  background: #45d5db;
+}
+.range-ticks .active {
+  width: 13px;
+  height: 13px;
+  top: -2px;
+  background: #c4ffff;
+  box-shadow:
+    0 0 0 3px #169aaf,
+    0 0 17px #82ffff;
+}
+.drag-hint {
+  text-align: center;
+  margin: 5px 0 0;
+  color: #adcdd3;
+  font: 13px "Libre Baskerville";
+}
+.continue-letter {
+  display: block;
+  margin: 12px auto 0;
+  border: 0;
+  background: transparent;
+  color: #bffdff;
+  font: italic 14px "Libre Baskerville";
+  cursor: pointer;
+}
+.continue-letter:hover {
+  text-decoration: underline;
+}
+.story {
+  max-width: 1340px;
+  margin: 35px auto 14px;
+  min-height: 150px;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  padding: 24px 32px;
+  border: 1px solid #167086;
+  border-radius: 24px;
+  background: #00293b87;
+}
+.story-copy {
+  width: 300px;
+}
+.section-label {
+  font: italic 16px "Libre Baskerville";
+  color: #75e5ef;
+  margin: 0;
+}
+.story h1 {
+  font: 27px "DM Serif Display";
+  margin: 3px 0;
+}
+.story-copy > p:last-child {
+  font: 14px "Libre Baskerville";
+  line-height: 1.6;
+  color: #d3e5e6;
+}
+.polaroids {
+  display: flex;
+  gap: 14px;
+  flex: 1;
+  justify-content: center;
+}
+.polaroids img {
+  width: 125px;
+  height: 105px;
+  flex: none;
+  object-fit: cover;
+  background: #fff;
+  padding: 6px 6px 18px;
+  box-shadow: 0 8px 12px #00172699;
+}
+.polaroids img:nth-child(1) {
+  transform: rotate(-6deg);
+}
+.polaroids img:nth-child(3) {
+  transform: rotate(6deg);
+}
+.end-note {
+  text-align: center;
+  margin-left: auto;
+  width: 280px;
+  color: #ecffff;
+  font: 17px "Libre Baskerville";
+}
+.end-note p {
+  margin: 0 0 8px;
+}
+.end-note em {
+  color: #a7d3d8;
+  font-size: 13px;
+}
+.end-note button,
+.letter-overlay .close {
+  display: block;
+  margin: 14px auto 0;
+  border: 1px solid #75e8ee;
+  border-radius: 18px;
+  padding: 9px 25px;
+  background: #08718b;
+  color: #fff;
+  font: 15px "Libre Baskerville";
+  box-shadow: 0 0 18px #39d7e955;
+  cursor: pointer;
+}
+.journey-complete .moon {
+  background: #83f4ed4d;
+}
+.letter-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  background: #001b2ad9;
+  backdrop-filter: blur(8px);
+}
+.letter {
+  width: min(460px, 88vw);
+  min-height: 450px;
+  padding: 50px 48px;
+  background: linear-gradient(120deg, #f5e9cc, #fff9eb 45%, #e8d5aa);
+  color: #59442d;
+  box-shadow: 0 25px 80px #000;
+  transform-origin: top;
+  animation: unfold 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.letter span {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  color: #086d78;
+}
+.letter p {
+  font: 18px "Libre Baskerville";
+  line-height: 1.7;
+  white-space: pre-line;
+}
+.close {
+  position: fixed;
+  right: 20px;
+  top: 14px;
+  font-size: 28px !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+footer {
+  text-align: center;
+  color: #8cbfc6;
+  font: 25px "Great Vibes";
+  margin-top: 17px;
+}
+@keyframes float {
+  50% {
+    transform: translateX(-50%) translateY(-7px);
+  }
+}
+@keyframes drive {
+  50% {
+    transform: rotate(-1.2deg) translateY(2px);
+  }
+}
+@keyframes unfold {
+  from {
+    transform: perspective(800px) rotateX(-80deg) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@media (max-width: 720px) {
+  .journey {
+    padding: 24px 16px 18px;
+  }
+  .motto {
+    display: none;
+  }
+  header {
+    width: auto;
+  }
+  .eyebrow {
+    font-size: 28px;
+  }
+  .scene {
+    height: 355px;
+  }
+  .memory-card {
+    top: 3px;
+    width: 192px;
+  }
+  .memory-card img {
+    height: 108px;
+  }
+  .jeepney {
+    width: 210px;
+    bottom: 28px;
+  }
+  .road {
+    height: 70px;
+  }
+  .road span {
+    top: 37px;
+  }
+  .timeline-wrap {
+    padding: 14px 14px 12px;
+    border-radius: 16px;
+  }
+  .range-status {
+    margin-bottom: 6px;
+  }
+  .range-status strong {
+    max-width: 210px;
+    font-size: 16px;
+  }
+  .range-status small {
+    font-size: 10px;
+  }
+  .range-status button {
+    width: 44px;
+    height: 44px;
+  }
+  .drag-hint {
+    font-size: 11px;
+  }
+  .story {
+    margin-top: 22px;
+    padding: 22px;
+    display: block;
+  }
+  .story-copy {
+    width: auto;
+  }
+  .polaroids {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 15px 4px 12px;
+    margin: 15px -4px 0;
+    scroll-snap-type: x mandatory;
+  }
+  .polaroids img {
+    width: 142px;
+    height: 112px;
+    scroll-snap-align: start;
+  }
+  .end-note {
+    width: auto;
+    margin: 20px 0 0;
+  }
+  .letter {
+    padding: 42px 28px;
+    min-height: 420px;
+  }
+  footer {
+    font-size: 21px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+  .memory-card {
+    animation: none;
+  }
+  .driving .jeepney-svg {
+    animation: none;
+  }
+}
